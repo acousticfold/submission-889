@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Page Title -->
+    <title>Phonikud: Supplementary Material</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Supplementary material for Phonikud including benchmark outputs, dataset examples, and supporting resources for Hebrew text-to-speech and G2P systems." />
+    <meta name="keywords"
+        content="Phonikud resources, Hebrew TTS demos, G2P tools, datasets, interactive demos, Hebrew linguistics" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Phonikud: Supplementary Material" />
+    <meta property="og:description"
+        content="Supplementary material for Phonikud including benchmark outputs, dataset examples, and supporting resources for Hebrew text-to-speech and G2P systems." />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./media/favicon.ico" />
+
+    <!-- Fonts & Icons -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="supplementary-styles.css" />
+    <link rel="stylesheet" href="presentation-tab.css" />
+</head>
+
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Phonikud: Supplementary Material</h1>
+                <p class="hero-subtitle">
+                    Please select a tab to view results.
+                </p>
+                <p class="hero-note">We will fully release all code, data, and trained models on publication.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="supplementary-results">
+        <div class="container">
+            <div class="results-header">
+                <div class="results-tabs" role="tablist" aria-label="Supplementary result sections">
+                    <button
+                        type="button"
+                        class="results-tab is-active"
+                        id="tab-g2p"
+                        role="tab"
+                        aria-selected="true"
+                        aria-controls="panel-g2p"
+                        data-tab-target="panel-g2p"
+                    >
+                        G2P Benchmark
+                    </button>
+                    <button
+                        type="button"
+                        class="results-tab"
+                        id="tab-tts"
+                        role="tab"
+                        aria-selected="false"
+                        aria-controls="panel-tts"
+                        data-tab-target="panel-tts"
+                    >
+                        TTS Comparison
+                    </button>
+                    <button
+                        type="button"
+                        class="results-tab"
+                        id="tab-dataset"
+                        role="tab"
+                        aria-selected="false"
+                        aria-controls="panel-dataset"
+                        data-tab-target="panel-dataset"
+                    >
+                        ILSpeech Dataset
+                    </button>
+                    <button
+                        type="button"
+                        class="results-tab"
+                        id="tab-explainer"
+                        role="tab"
+                        aria-selected="false"
+                        aria-controls="panel-explainer"
+                        data-tab-target="panel-explainer"
+                    >
+                        Interactive Explanation
+                    </button>
+                </div>
+            </div>
+
+            <section class="result-panel is-active" id="panel-g2p" role="tabpanel" aria-labelledby="tab-g2p">
+                <div class="panel-copy">
+                    <h2 class="section-title">G2P Benchmark</h2>
+                    <p class="panel-subtitle">100 benchmark sentences from ILSpeech with ground-truth phonemes and predictions from all G2P systems.</p>
+                </div>
+                <div class="results-list" id="g2p-results">
+                    <p class="loading-state">Loading G2P benchmark data...</p>
+                </div>
+            </section>
+
+            <section class="result-panel" id="panel-tts" role="tabpanel" aria-labelledby="tab-tts" hidden>
+                <div class="panel-copy">
+                    <h2 class="section-title">TTS Comparison</h2>
+                    <p class="panel-subtitle">100 samples from SASPEECH with ground-truth phonemes and system output.</p>
+                </div>
+                <div class="results-list" id="tts-results">
+                    <p class="loading-state">Loading TTS comparison data...</p>
+                </div>
+            </section>
+
+            <section class="result-panel" id="panel-dataset" role="tabpanel" aria-labelledby="tab-dataset" hidden>
+                <div class="panel-copy">
+                    <h2 class="section-title">ILSpeech Dataset</h2>
+                    <p class="panel-subtitle">Random sample clips from the 2-hour dataset.</p>
+                </div>
+                <div class="dataset-examples">
+                    <div class="dataset-examples-header">
+                        <h3>Sample Clips</h3>
+                        <p>The dataset will be released under a non-commercial license with ethical-use requirements.</p>
+                    </div>
+                    <div class="dataset-example-list" id="dataset-results">
+                        <p class="loading-state">Loading dataset samples...</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="result-panel" id="panel-explainer" role="tabpanel" aria-labelledby="tab-explainer" hidden>
+                <div class="panel-copy">
+                    <h2 class="section-title">Interactive Explanation</h2>
+                </div>
+                <div id="presentation-tab-root">
+                    <p class="loading-state">Loading explanation...</p>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left"></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="single-media-playback.js"></script>
+    <script src="supplementary-script.js"></script>
+    <script src="presentation-tab.js"></script>
+</body>
+
+</html>
